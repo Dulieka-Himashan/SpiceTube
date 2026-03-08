@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { useNavigate } from "react-router-dom"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Navbar from "../components/Navbar"
@@ -7,6 +8,7 @@ import Footer from "../components/Footer"
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Innovation() {
+  const navigate = useNavigate();
 
   const heroRef = useRef(null)
   const statsRef = useRef(null)
@@ -40,19 +42,19 @@ export default function Innovation() {
   ]
 
   const features = [
-    { tag: "PROCESSING", title: "Freeze Drying Technology", desc: "Preserving the full aroma, flavor, and nutritional value of Ceylon spices through advanced freeze-drying techniques for premium global markets.", color: "#2196F3", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" },
-    { tag: "EXTRACTION", title: "Essential Oil Distillation", desc: "Steam distillation and CO2 extraction methods producing high-grade cinnamon, pepper and cardamom essential oils for pharmaceutical and cosmetic industries.", color: "#9C27B0", image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80" },
-    { tag: "PACKAGING", title: "Smart Packaging Solutions", desc: "QR-coded, tamper-proof packaging with traceability from farm to shelf — building trust with international buyers and end consumers.", color: "#FF9800", image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80" },
-    { tag: "QUALITY", title: "Lab Testing & Certification", desc: "On-site and mobile laboratory testing for pesticide residue, heavy metals, and microbiology — ensuring compliance with EU, US and Japanese standards.", color: "#4CAF50", image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80" },
-    { tag: "DIGITAL", title: "Digital Farm Management", desc: "Mobile apps and IoT sensors helping farmers track soil health, weather patterns, and crop performance in real time.", color: "#00BCD4", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" },
-    { tag: "VALUE ADDITION", title: "Spice Blends & Ready Mixes", desc: "Developing premium Ceylon spice blends, pastes, and ready-to-use products targeting retail markets in Europe, USA and the Middle East.", color: "#C8960C", image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80" },
+    { tag: "PROCESSING", title: "Freeze Drying Technology", desc: "Preserving the full aroma, flavor, and nutritional value of Ceylon spices through advanced freeze-drying techniques for premium global markets.", color: "#2196F3", image: "/images/farmer.jpeg" },
+    { tag: "EXTRACTION", title: "Essential Oil Distillation", desc: "Steam distillation and CO2 extraction methods producing high-grade cinnamon, pepper and cardamom essential oils for pharmaceutical and cosmetic industries.", color: "#9C27B0", image: "/images/spices.jpeg" },
+    { tag: "PACKAGING", title: "Smart Packaging Solutions", desc: "QR-coded, tamper-proof packaging with traceability from farm to shelf — building trust with international buyers and end consumers.", color: "#FF9800", image: "/images/second-farmer.jpeg" },
+    { tag: "QUALITY", title: "Lab Testing & Certification", desc: "On-site and mobile laboratory testing for pesticide residue, heavy metals, and microbiology — ensuring compliance with EU, US and Japanese standards.", color: "#4CAF50", image: "/images/pepper.jpeg" },
+    { tag: "DIGITAL", title: "Digital Farm Management", desc: "Mobile apps and IoT sensors helping farmers track soil health, weather patterns, and crop performance in real time.", color: "#00BCD4", image: "/images/spices-pack.jpeg" },
+    { tag: "VALUE ADDITION", title: "Spice Blends & Ready Mixes", desc: "Developing premium Ceylon spice blends, pastes, and ready-to-use products targeting retail markets in Europe, USA and the Middle East.", color: "#C8960C", image: "/images/spices.jpeg" },
   ]
 
   const articles = [
-    { tag: "TECHNOLOGY", title: "How Freeze-Drying is Revolutionizing Ceylon Pepper Export", desc: "A deep dive into how Sri Lankan exporters are using freeze-drying to command premium prices in global markets.", date: "March 1, 2025", read: "6 min read", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" },
-    { tag: "DIGITAL", title: "Mobile Apps Transforming Sri Lankan Spice Farming", desc: "How digital tools are helping farmers track yields, soil health and market prices from their smartphones.", date: "Feb 20, 2025", read: "5 min read", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" },
-    { tag: "PACKAGING", title: "QR Code Traceability: Building Trust with Global Buyers", desc: "SpiceTubeLK's packaging innovation initiative connects consumers directly to the farms that grew their spices.", date: "Feb 12, 2025", read: "4 min read", image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80" },
-    { tag: "EXTRACTION", title: "Ceylon Cinnamon Essential Oil: A Growing Global Market", desc: "The pharmaceutical and cosmetic industries are driving demand for high-grade Ceylon cinnamon oil.", date: "Feb 5, 2025", read: "7 min read", image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80" },
+    { tag: "TECHNOLOGY", title: "How Freeze-Drying is Revolutionizing Ceylon Pepper Export", desc: "A deep dive into how Sri Lankan exporters are using freeze-drying to command premium prices in global markets.", date: "March 1, 2025", read: "6 min read", image: "/images/hands-spices.jpeg" },
+    { tag: "DIGITAL", title: "Mobile Apps Transforming Sri Lankan Spice Farming", desc: "How digital tools are helping farmers track yields, soil health and market prices from their smartphones.", date: "Feb 20, 2025", read: "5 min read", image: "/images/spices-pack.jpeg" },
+    { tag: "PACKAGING", title: "QR Code Traceability: Building Trust with Global Buyers", desc: "SpiceTubeLK's packaging innovation initiative connects consumers directly to the farms that grew their spices.", date: "Feb 12, 2025", read: "4 min read", image: "/images/spicy.jpeg" },
+    { tag: "EXTRACTION", title: "Ceylon Cinnamon Essential Oil: A Growing Global Market", desc: "The pharmaceutical and cosmetic industries are driving demand for high-grade Ceylon cinnamon oil.", date: "Feb 5, 2025", read: "7 min read", image: "/images/spices-pack.jpeg" },
   ]
 
   const tagColors = { "TECHNOLOGY": "#2196F3", "DIGITAL": "#00BCD4", "PACKAGING": "#FF9800", "EXTRACTION": "#9C27B0" }
@@ -64,7 +66,7 @@ export default function Innovation() {
       {/* HERO */}
       <section style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
         <img
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=90"
+          src="/images/spices-in-cups.jpeg"
           alt="Innovation"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
         />
@@ -94,9 +96,8 @@ export default function Innovation() {
             <button style={{ backgroundColor: "#2196F3", color: "#FFFFFF", padding: "15px 34px", borderRadius: "8px", fontWeight: 800, fontSize: "14px", border: "none", cursor: "pointer", transition: "all 0.3s" }}
               onMouseEnter={e => e.currentTarget.style.transform = "translateY(-3px)"}
               onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
-            >Explore Technologies</button>
-            <button style={{ backgroundColor: "transparent", border: "1px solid rgba(255,255,255,0.3)", color: "#FFFFFF", padding: "15px 34px", borderRadius: "8px", fontWeight: 600, fontSize: "14px", cursor: "pointer" }}>
-              Watch Innovation Videos
+             onClick={() => navigate("/watch")}>Explore Technologies</button>
+            <button style={{ backgroundColor: "transparent", border: "1px solid rgba(255,255,255,0.3)", color: "#FFFFFF", padding: "15px 34px", borderRadius: "8px", fontWeight: 600, fontSize: "14px", cursor: "pointer" }} onClick={() => navigate("/watch")}>Watch Innovation Videos
             </button>
           </div>
 

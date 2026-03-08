@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { useNavigate } from "react-router-dom"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Navbar from "../components/Navbar"
@@ -7,6 +8,7 @@ import Footer from "../components/Footer"
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Sustainability() {
+  const navigate = useNavigate();
 
   const heroRef = useRef(null)
   const statsRef = useRef(null)
@@ -40,18 +42,18 @@ export default function Sustainability() {
   ]
 
   const initiatives = [
-    { tag: "SOIL HEALTH", title: "Regenerative Agriculture Program", desc: "Teaching farmers composting, cover cropping, and natural pest management to restore soil biodiversity across Sri Lanka's spice regions.", color: "#8BC34A", image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80" },
-    { tag: "WATER", title: "Rainwater Harvesting & Irrigation", desc: "Installing water conservation systems across 200+ farms to reduce dependence on groundwater and protect natural water sources.", color: "#2196F3", image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80" },
-    { tag: "BIODIVERSITY", title: "Agroforestry & Native Species", desc: "Integrating native tree species into spice farms to restore biodiversity, provide shade, and create additional income streams.", color: "#4CAF50", image: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80" },
-    { tag: "CLIMATE", title: "Climate-Resilient Farming", desc: "Training farmers in climate adaptation techniques including drought-resistant varieties and early warning systems.", color: "#FF9800", image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80" },
-    { tag: "PACKAGING", title: "Zero Waste Packaging Initiative", desc: "Transitioning spice exporters to biodegradable and recyclable packaging materials for global markets.", color: "#9C27B0", image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80" },
-    { tag: "CARBON", title: "Carbon Sequestration Project", desc: "Measuring and certifying carbon stored in Sri Lanka's spice farms to create new revenue through carbon credits.", color: "#00BCD4", image: "https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?w=600&q=80" },
+    { tag: "SOIL HEALTH", title: "Regenerative Agriculture Program", desc: "Teaching farmers composting, cover cropping, and natural pest management to restore soil biodiversity across Sri Lanka's spice regions.", color: "#8BC34A", image: "/images/hands-spices.jpeg" },
+    { tag: "WATER", title: "Rainwater Harvesting & Irrigation", desc: "Installing water conservation systems across 200+ farms to reduce dependence on groundwater and protect natural water sources.", color: "#2196F3", image: "/images/spicy.jpeg" },
+    { tag: "BIODIVERSITY", title: "Agroforestry & Native Species", desc: "Integrating native tree species into spice farms to restore biodiversity, provide shade, and create additional income streams.", color: "#4CAF50", image: "/images/spices-pack.jpeg" },
+    { tag: "CLIMATE", title: "Climate-Resilient Farming", desc: "Training farmers in climate adaptation techniques including drought-resistant varieties and early warning systems.", color: "#FF9800", image: "/images/spices.jpeg" },
+    { tag: "PACKAGING", title: "Zero Waste Packaging Initiative", desc: "Transitioning spice exporters to biodegradable and recyclable packaging materials for global markets.", color: "#9C27B0", image: "/images/cinnamon.jpeg" },
+    { tag: "CARBON", title: "Carbon Sequestration Project", desc: "Measuring and certifying carbon stored in Sri Lanka's spice farms to create new revenue through carbon credits.", color: "#00BCD4", image: "/images/shop.jpeg" },
   ]
 
   const stories = [
-    { name: "Nimal Rajapaksa", region: "Matale", title: "How Composting Doubled My Cinnamon Yield", desc: "After switching to regenerative practices, Nimal's farm saw a 40% increase in soil health scores and a doubling of yield within 2 years.", image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=400&q=80" },
-    { name: "Chamari Wickramasinghe", region: "Kandy", title: "Women's Cooperative Goes 100% Organic", desc: "Chamari led her 30-member cooperative to full organic certification, opening doors to premium European markets.", image: "https://images.unsplash.com/photo-1595508064774-5ff825520bb6?w=400&q=80" },
-    { name: "Asela Fernando", region: "Galle", title: "Agroforestry: Growing Spices Under the Canopy", desc: "By integrating native trees with his pepper vines, Asela restored biodiversity and reduced water usage by 35%.", image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&q=80" },
+    { name: "Nimal Rajapaksa", region: "Matale", title: "How Composting Doubled My Cinnamon Yield", desc: "After switching to regenerative practices, Nimal's farm saw a 40% increase in soil health scores and a doubling of yield within 2 years.", image: "/images/spices-in-cups.jpeg" },
+    { name: "Chamari Wickramasinghe", region: "Kandy", title: "Women's Cooperative Goes 100% Organic", desc: "Chamari led her 30-member cooperative to full organic certification, opening doors to premium European markets.", image: "/images/second-farmer.jpeg" },
+    { name: "Asela Fernando", region: "Galle", title: "Agroforestry: Growing Spices Under the Canopy", desc: "By integrating native trees with his pepper vines, Asela restored biodiversity and reduced water usage by 35%.", image: "/images/second-farmer.jpeg" },
   ]
 
   return (
@@ -61,7 +63,7 @@ export default function Sustainability() {
       {/* HERO */}
       <section style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
         <img
-          src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=90"
+          src="/images/second-farmer.jpeg"
           alt="Sustainability"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
         />
@@ -91,10 +93,8 @@ export default function Sustainability() {
             <button style={{ backgroundColor: "#8BC34A", color: "#050F08", padding: "15px 34px", borderRadius: "8px", fontWeight: 800, fontSize: "14px", border: "none", cursor: "pointer", transition: "all 0.3s" }}
               onMouseEnter={e => e.currentTarget.style.transform = "translateY(-3px)"}
               onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
-            >Explore Initiatives</button>
-            <button style={{ backgroundColor: "transparent", border: "1px solid rgba(255,255,255,0.3)", color: "#FFFFFF", padding: "15px 34px", borderRadius: "8px", fontWeight: 600, fontSize: "14px", cursor: "pointer" }}>
-              Watch Stories
-            </button>
+             onClick={() => navigate("/farmer-stories")}>Explore Initiatives</button>
+            <button style={{ backgroundColor: "transparent", border: "1px solid rgba(255,255,255,0.3)", color: "#FFFFFF", padding: "15px 34px", borderRadius: "8px", fontWeight: 600, fontSize: "14px", cursor: "pointer" }} onClick={() => window.location.href="/watch"}>Watch Stories</button>
           </div>
 
         </div>
@@ -174,7 +174,7 @@ export default function Sustainability() {
                 Farmers Leading the <span style={{ color: "#8BC34A", fontStyle: "italic" }}>Green Change</span>
               </h2>
             </div>
-            <a href="#" style={{ color: "#8BC34A", fontSize: "14px", fontWeight: 600, textDecoration: "none", borderBottom: "1px solid #8BC34A", paddingBottom: "2px" }}>View All Stories</a>
+            <a href="/farmer-stories" style={{ color: "#8BC34A", fontSize: "14px", fontWeight: 600, textDecoration: "none", borderBottom: "1px solid #8BC34A", paddingBottom: "2px" }}>View All Stories</a>
           </div>
 
           <div ref={storiesRef} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
@@ -191,7 +191,7 @@ export default function Sustainability() {
                   <p style={{ color: "#8BC34A", fontSize: "12px", fontWeight: 600, marginBottom: "8px" }}>{story.name} — {story.region}</p>
                   <h3 style={{ color: "#FFFFFF", fontSize: "17px", fontWeight: 800, marginBottom: "10px", fontFamily: "'Playfair Display', serif", lineHeight: 1.3 }}>{story.title}</h3>
                   <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "13px", lineHeight: 1.7, marginBottom: "16px" }}>{story.desc}</p>
-                  <a href="#" style={{ color: "#8BC34A", fontSize: "13px", fontWeight: 600, textDecoration: "none" }}>Read Full Story →</a>
+                  <a href="/farmer-stories" style={{ color: "#8BC34A", fontSize: "13px", fontWeight: 600, textDecoration: "none" }}>Read Full Story →</a>
                 </div>
               </div>
             ))}

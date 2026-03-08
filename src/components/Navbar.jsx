@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false)
-  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60)
@@ -51,17 +51,17 @@ export default function Navbar() {
 
         <nav style={{ display: "flex", alignItems: "center", gap: "4px" }}>
           {links.map((link) => (
-            <a key={link.label} href={link.href} style={{ color: "#A0B8A4", fontSize: "13px", fontWeight: 500, textDecoration: "none", padding: "6px 14px", borderRadius: "6px", transition: "all 0.2s" }}
+            <Link key={link.label} to={link.href} style={{ color: "#A0B8A4", fontSize: "13px", fontWeight: 500, textDecoration: "none", padding: "6px 14px", borderRadius: "6px", transition: "all 0.2s" }}
               onMouseEnter={e => { e.currentTarget.style.color = "#FFFFFF"; e.currentTarget.style.backgroundColor = "rgba(200,150,12,0.15)" }}
               onMouseLeave={e => { e.currentTarget.style.color = "#A0B8A4"; e.currentTarget.style.backgroundColor = "transparent" }}
-            >{link.label}</a>
+            >{link.label}</Link>
           ))}
         </nav>
 
         <button style={{ backgroundColor: "#C8960C", color: "#050F08", padding: "9px 22px", borderRadius: "6px", fontWeight: 700, fontSize: "13px", border: "none", cursor: "pointer", transition: "all 0.2s" }}
           onMouseEnter={e => { e.currentTarget.style.backgroundColor = "#E5AC14"; e.currentTarget.style.transform = "translateY(-2px)" }}
           onMouseLeave={e => { e.currentTarget.style.backgroundColor = "#C8960C"; e.currentTarget.style.transform = "translateY(0)" }}
-        >
+        onClick={() => navigate("/watch")}>
           Watch Now
         </button>
 

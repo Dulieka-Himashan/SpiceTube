@@ -31,7 +31,7 @@ export default function FarmerStories() {
       method: "Organic & Regenerative",
       cert: "ISO Certified",
       story: "Third generation cinnamon farmer transforming traditional practices with sustainable methods, now exporting to 12 countries.",
-      image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=400https://images.unsplash.com/photo-1589923188900-85dae523342b?w=400&q=80q=80",
+      image: "/images/second-farmer.jpeg",
     },
     {
       name: "Kamala Perera",
@@ -40,7 +40,7 @@ export default function FarmerStories() {
       method: "Women-Led Cooperative",
       cert: "Fairtrade Certified",
       story: "Leading a cooperative of 45 women farmers, Kamala has tripled household incomes through direct export partnerships.",
-      image: "https://images.unsplash.com/photo-1559181567-c3190b4d0939?w=400https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&q=80q=80",
+      image: "/images/farmer.jpeg",
     },
     {
       name: "Ranjith Silva",
@@ -49,7 +49,7 @@ export default function FarmerStories() {
       method: "Agroforestry",
       cert: "Organic Certified",
       story: "Pioneer of agroforestry techniques in Southern Sri Lanka, Ranjith's farm produces premium quality cloves for European markets.",
-      image: "https://images.unsplash.com/photo-1595508064774-5ff825520bb6?w=400https://images.unsplash.com/photo-1592878849122-facb97ed2bce?w=400&q=80q=80",
+      image: "/images/second-farmer.jpeg",
     },
     {
       name: "Priya Wijesinghe",
@@ -58,7 +58,7 @@ export default function FarmerStories() {
       method: "Youth Agriculture Leader",
       cert: "HACCP Certified",
       story: "At 28, Priya is revolutionizing turmeric processing with modern extraction technology, creating value-added products.",
-      image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?w=400&q=80q=80",
+      image: "/images/second-farmer.jpeg",
     },
     {
       name: "Dharmasiri Jayawardena",
@@ -67,7 +67,7 @@ export default function FarmerStories() {
       method: "Climate-Resilient Farming",
       cert: "GlobalG.A.P Certified",
       story: "Using climate-smart agriculture techniques, Dharmasiri has maintained consistent yields despite changing weather patterns.",
-      image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=400&q=80q=80",
+      image: "/images/second-farmer.jpeg",
     },
     {
       name: "Anoma Fernando",
@@ -76,7 +76,7 @@ export default function FarmerStories() {
       method: "Community Transformation",
       cert: "Rainforest Alliance",
       story: "Anoma's community project has brought 200 small farmers together under one export brand, changing lives across her village.",
-      image: "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?w=400https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=400&q=80q=80",
+      image: "/images/second-farmer.jpeg",
     },
   ]
 

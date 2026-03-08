@@ -48,11 +48,11 @@ export default function ExportInsights() {
   ]
 
   const articles = [
-    { tag: "MARKET TRENDS", title: "Global Demand for Ceylon Cinnamon Surges in 2025", desc: "European and North American markets show 18% growth in Ceylon cinnamon imports.", date: "March 1, 2025", read: "5 min read", image: "https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=600&q=80" },
-    { tag: "CERTIFICATION", title: "Complete Guide to EU Organic Certification for Spice Exporters", desc: "Step-by-step breakdown of what Sri Lankan exporters need to qualify.", date: "Feb 24, 2025", read: "8 min read", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" },
-    { tag: "BUYER GUIDE", title: "How to Verify International Spice Buyers: A Safety Guide", desc: "Protect your business from fraud with these verification steps.", date: "Feb 18, 2025", read: "6 min read", image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" },
-    { tag: "PRICING", title: "Ceylon Pepper Export Pricing Trends: Q1 2025 Report", desc: "Comprehensive analysis of black and white pepper pricing across key export markets.", date: "Feb 10, 2025", read: "7 min read", image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80" },
-    { tag: "TRADE POLICY", title: "New India-Sri Lanka Trade Agreement: Impact on Spice Exports", desc: "What the new bilateral agreement means for Ceylon spice exporters.", date: "Feb 5, 2025", read: "5 min read", image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" },
+    { tag: "MARKET TRENDS", title: "Global Demand for Ceylon Cinnamon Surges in 2025", desc: "European and North American markets show 18% growth in Ceylon cinnamon imports.", date: "March 1, 2025", read: "5 min read", image: "/images/cinnamon.jpeg" },
+    { tag: "CERTIFICATION", title: "Complete Guide to EU Organic Certification for Spice Exporters", desc: "Step-by-step breakdown of what Sri Lankan exporters need to qualify.", date: "Feb 24, 2025", read: "8 min read", image: "/images/shop.jpeg" },
+    { tag: "BUYER GUIDE", title: "How to Verify International Spice Buyers: A Safety Guide", desc: "Protect your business from fraud with these verification steps.", date: "Feb 18, 2025", read: "6 min read", image: "/images/spices-in-cups.jpeg" },
+    { tag: "PRICING", title: "Ceylon Pepper Export Pricing Trends: Q1 2025 Report", desc: "Comprehensive analysis of black and white pepper pricing across key export markets.", date: "Feb 10, 2025", read: "7 min read", image: "/images/farmer.jpeg" },
+    { tag: "TRADE POLICY", title: "New India-Sri Lanka Trade Agreement: Impact on Spice Exports", desc: "What the new bilateral agreement means for Ceylon spice exporters.", date: "Feb 5, 2025", read: "5 min read", image: "/images/second-farmer.jpeg" },
   ]
 
   const tagColors = { "MARKET TRENDS": "#C8960C", "CERTIFICATION": "#2196F3", "BUYER GUIDE": "#4CAF50", "PRICING": "#FF9800", "TRADE POLICY": "#9C27B0" }
@@ -91,10 +91,8 @@ export default function ExportInsights() {
               <button style={{ backgroundColor: "#C8960C", color: "#050F08", padding: "14px 28px", borderRadius: "8px", fontWeight: 800, fontSize: "14px", border: "none", cursor: "pointer", transition: "all 0.3s" }}
                 onMouseEnter={e => e.currentTarget.style.transform = "translateY(-3px)"}
                 onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
-              >Download Export Guide</button>
-              <button style={{ backgroundColor: "transparent", border: "1px solid rgba(255,255,255,0.3)", color: "#FFFFFF", padding: "14px 28px", borderRadius: "8px", fontWeight: 600, fontSize: "14px", cursor: "pointer" }}>
-                Watch Videos
-              </button>
+               onClick={() => { const a = document.createElement("a"); a.href = "/SpiceTubeLK_Export_Guide.pdf"; a.download = "SpiceTubeLK_Export_Guide.pdf"; a.click(); }}>Download Export Guide</button>
+              <button style={{ backgroundColor: "transparent", border: "1px solid rgba(255,255,255,0.3)", color: "#FFFFFF", padding: "14px 28px", borderRadius: "8px", fontWeight: 600, fontSize: "14px", cursor: "pointer", onClick: undefined }} onClick={() => window.location.href="/watch"}>Watch Videos</button>
             </div>
 
             <div style={{ display: "flex", gap: "32px", paddingTop: "32px", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
@@ -113,7 +111,7 @@ export default function ExportInsights() {
         <div style={{ width: "50%", position: "relative", overflow: "hidden" }}>
           <img
             ref={imgRef}
-            src="https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=1400&q=90"
+            src="/images/pepper.jpeg"
             alt="Ceylon Cinnamon"
             style={{ width: "100%", height: "115%", objectFit: "cover", objectPosition: "center", marginTop: "-7.5%" }}
           />

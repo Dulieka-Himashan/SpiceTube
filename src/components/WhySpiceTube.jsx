@@ -1,10 +1,12 @@
 import { useEffect, useRef } from "react"
+import { useNavigate } from "react-router-dom"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function WhySpiceTube() {
+  const navigate = useNavigate();
 
   const sectionRef = useRef(null)
   const labelRef = useRef(null)
@@ -140,6 +142,7 @@ export default function WhySpiceTube() {
             }}
             onMouseEnter={e => { e.currentTarget.style.backgroundColor = "#C8960C"; e.currentTarget.style.color = "#050F08" }}
             onMouseLeave={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = "#C8960C" }}
+            onClick={() => window.location.href="/farmer-stories"}
             >
               Learn More About Us
             </button>
