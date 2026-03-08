@@ -1,16 +1,74 @@
-# React + Vite
+# SpiceTubeLK 🌶️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Sri Lanka's Digital Voice of Ceylon Spices
 
-Currently, two official plugins are available:
+A premium digital content platform dedicated to educating, connecting, and empowering Sri Lanka's spice ecosystem to the world.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Site
+[spicetube.lk](https://spicetube.lk)
 
-## React Compiler
+## 📸 Pages
+- **Home** — Hero, Featured Videos, Farmer Stories, Latest News, Partners
+- **Watch** — Full video library with filters and featured episode
+- **Farmer Stories** — Real stories from Sri Lankan spice farmers
+- **Export Insights** — Export guides, regulations, and downloadable PDF guide
+- **Sustainability** — Environmental initiatives and regenerative agriculture
+- **Innovation** — Technology and innovation in the spice industry
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Built With
+- **React** + **Vite**
+- **React Router DOM** — Page navigation
+- **GSAP** — Scroll animations
+- **Tailwind CSS** — Utility styling
+- **ReportLab** — PDF generation
 
-## Expanding the ESLint configuration
+## ✨ Features
+- Cinematic intro animation with falling spices
+- Custom gold cursor
+- Scroll progress bar
+- Staggered card animations on scroll
+- Parallax hero sections
+- Downloadable Ceylon Spice Export Guide PDF
+- Filter systems on Watch and Farmer Stories pages
+- Fully responsive navigation
+- Local image assets — no broken Unsplash links
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎨 Design System
+| Token | Value |
+|-------|-------|
+| Background | `#0A0F0D` |
+| Card | `#111916` |
+| Gold Accent | `#C8960C` |
+| Border | `#1E3022` |
+| Font Heading | Playfair Display |
+| Font Body | Inter |
+
+## 🚀 Getting Started
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Deploy to Firebase
+firebase deploy
+```
+
+## 📁 Project Structure
+```
+spicetube/
+├── public/
+│   └── images/          # Local spice & farmer images
+├── src/
+│   ├── components/      # Navbar, Hero, Footer, GlobalEffects...
+│   ├── pages/           # Watch, FarmerStories, ExportInsights...
+│   └── App.jsx          # Routes
+└── firebase.json        # Firebase hosting config
+```
+
+## 👨‍💻 Developed By
+Dulieka Himashan — 2025
