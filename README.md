@@ -71,4 +71,5 @@ spicetube/
 ```
 
 ## 👨‍💻 Developed By
-Dulieka Himashan — 2025
+Dulieka Himashan — 2026
+
